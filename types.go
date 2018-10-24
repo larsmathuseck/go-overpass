@@ -26,8 +26,8 @@ type Meta struct {
 
 // Center type represents OSM center type.
 type Center struct {
-	Lat float64
-	Lon float64
+	Lat float64 `json:"lat"`
+	Lon float64 `json:"lon"`
 }
 
 // Node represents OSM node type.
