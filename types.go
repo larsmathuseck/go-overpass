@@ -20,11 +20,14 @@ type Meta struct {
 	Changeset int64
 	User      string
 	UID       int64
-	Center    struct {
-		Lat float64
-		Lon float64
-	}
+	Center    Center
 	Tags      map[string]string
+}
+
+// Center type represents OSM center type.
+type Center struct {
+	Lat float64
+	Lon float64
 }
 
 // Node represents OSM node type.
