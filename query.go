@@ -28,15 +28,15 @@ type overpassResponseElement struct {
 	Lat       float64     `json:"lat"`
 	Lon       float64     `json:"lon"`
 	Timestamp *time.Time  `json:"timestamp"`
-	Center struct {
+	Center    struct {
 		Lat float64 `json:"lat"`
 		Lon float64 `json:"lon"`
 	} `json:"center"`
-	Version   int64       `json:"version"`
-	Changeset int64       `json:"changeset"`
-	User      string      `json:"user"`
-	UID       int64       `json:"uid"`
-	Nodes     []int64     `json:"nodes"`
+	Version   int64   `json:"version"`
+	Changeset int64   `json:"changeset"`
+	User      string  `json:"user"`
+	UID       int64   `json:"uid"`
+	Nodes     []int64 `json:"nodes"`
 	Members   []struct {
 		Type ElementType `json:"type"`
 		Ref  int64       `json:"ref"`
@@ -72,6 +72,8 @@ func (c *Client) Query(query string) (Result, error) {
 			Timestamp: el.Timestamp,
 			Version:   el.Version,
 			Changeset: el.Changeset,
+			Lat:       el.Lat,
+			Lon:       el.Lon,
 			User:      el.User,
 			UID:       el.UID,
 			Tags:      el.Tags,

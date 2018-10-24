@@ -20,6 +20,8 @@ type Meta struct {
 	Changeset int64
 	User      string
 	UID       int64
+	Lat       float64
+	Lon       float64
 	Tags      map[string]string
 }
 
