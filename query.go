@@ -28,6 +28,10 @@ type overpassResponseElement struct {
 	Lat       float64     `json:"lat"`
 	Lon       float64     `json:"lon"`
 	Timestamp *time.Time  `json:"timestamp"`
+	Center struct {
+		Lat float64 `json:"lat"`
+		Lon float64 `json:"lon"`
+	} `json:"center"`
 	Version   int64       `json:"version"`
 	Changeset int64       `json:"changeset"`
 	User      string      `json:"user"`
